@@ -1,0 +1,36 @@
+# Ignore build folders
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+[Xx]64/
+[Aa]rm64/
+
+# Ignore Visual Studio temporary files
+*.suo
+*.user
+*.userosscache
+*.unsuccessfulbuild
+*.VC.db
+*.VC.opendb
+
+# Ignore Visual Studio cache files
+ipch/
+*.pch
+
+# Ignore CMake cache files
+CMakeCache.txt
+CMakeFiles/
+
+# Ignore generated executables
+*.exe
+*.dll
+*.obj
+*.lib
+*.pdb
+*.idb
+
+# Ignore logs
+*.log
+
+# Ignore other IDE-specific folders
+.vs/
