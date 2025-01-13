@@ -167,6 +167,7 @@
     <ClInclude Include="res\texture\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="res\fs.shader" />
     <None Include="res\Shaders\fs.shader" />
     <None Include="res\Shaders\vs.shader" />
@@ -174,6 +175,7 @@
     <None Include="res\vs.shader" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\texture\awesomeface.png" />
     <Image Include="res\texture\container.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -48,9 +48,13 @@
     <None Include="res\Shaders\fs.shader" />
     <None Include="res\Shaders\vs.shader" />
     <None Include=".gitignore" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\texture\container.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\texture\awesomeface.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
