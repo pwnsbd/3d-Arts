@@ -25,7 +25,7 @@ CMakeFiles/
 *.exe
 *.dll
 *.obj
-*.lib
+#*.lib
 *.pdb
 *.idb
 
