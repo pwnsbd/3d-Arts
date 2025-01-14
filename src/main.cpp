@@ -1,5 +1,8 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #include <iostream>
 #include "../res/Shaders/Shader.h"
@@ -125,6 +128,12 @@ int main()
     //// or set it via the texture class
     ourShader.setInt("texture2", 1);
 
+
+	 // rotate
+    //trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+	//trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
+
+
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -148,6 +157,12 @@ int main()
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT , 0);
 
+        glm::mat4 trans = glm::mat4(1.0f); // identity matrix
+        
+        trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f)); // this moves the object to right-bottom corner; 
+        trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(1.0f, 0.0f, 0.0f));
+        unsigned int transformLoc = glGetUniformLocation(ourShader.ID, "transform");
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
         glfwSwapBuffers(window);
