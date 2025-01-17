@@ -162,6 +162,7 @@
   <ItemGroup>
     <ClInclude Include="dependencies\Include\glad\glad.h" />
     <ClInclude Include="dependencies\Include\GLFW\glfw3.h" />
+    <ClInclude Include="res\camera\Camera.h" />
     <ClInclude Include="res\Shader.h" />
     <ClInclude Include="res\Shaders\Shader.h" />
     <ClInclude Include="res\texture\stb_image.h" />
